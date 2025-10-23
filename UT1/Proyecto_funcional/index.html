@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Práctica inicial · DIW</title>
+
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+    <style>
+      .navbar .nav-link {
+        color: #fff;
+        padding: 0.5rem 1rem;
+        display: inline-block;
+      }
+      .navbar .nav-link:hover {
+        color: #f8f9fa;
+        opacity: 0.85;
+      }
+
+      .hero-art {
+        width: 420px;
+        height: 260px;
+      }
+
+      .thumb-dark {
+        height: 180px;
+        background-color: #6c757d;
+        color: #fff;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-weight: 500;
+      }
+      .avatar-iniciales {
+        width: 48px;
+        height: 48px;
+        border-radius: 50%;
+      }
+    </style>
+  </head>
+  <body>
+    <nav class="navbar navbar-dark bg-dark">
+      <div class="container">
+        <ul class="navbar-nav flex-row mx-auto gap-3 gap-md-4">
+          <li class="nav-item"><span class="nav-link">HOME</span></li>
+          <li class="nav-item"><span class="nav-link">CONTACTO</span></li>
+          <li class="nav-item"><span class="nav-link">TÉRMINOS</span></li>
+        </ul>
+      </div>
+    </nav>
+
+    <header class="py-5">
+      <div class="container">
+        <div class="row align-items-center g-5">
+          <div class="col-lg-7">
+            <h1 class="display-4 fw-bold lh-1 mb-4">
+              Práctica inicial de<br />
+              Diseño de<br />
+              Interfaces web
+            </h1>
+
+            <div
+              class="d-inline-flex align-items-center bg-light border rounded-pill p-2 pe-3"
+            >
+              <div
+                class="avatar-iniciales bg-secondary text-white fw-bold d-flex align-items-center justify-content-center me-2"
+              >
+                RB
+              </div>
+              <div class="small">
+                <div class="fw-bold text-uppercase">Rizwan Baig</div>
+                <div>Desarrollo de app Web</div>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-lg-5 d-none d-lg-flex justify-content-end">
+            <div class="hero-art bg-light border rounded-3"></div>
+          </div>
+        </div>
+      </div>
+    </header>
+
+    <section class="pb-5">
+      <div class="container">
+        <div class="row row-cols-1 row-cols-md-3 g-4">
+          <div class="col">
+            <div class="card shadow-sm h-100">
+              <div class="thumb-dark text-white">Práctica 1</div>
+              <div class="card-body">
+                <h3 class="h5 fw-bold">Crear el código</h3>
+                <p class="mb-0">
+                  Html<br />
+                  Básico
+                </p>
+              </div>
+            </div>
+          </div>
+
+          <div class="col">
+            <div class="card shadow-sm h-100">
+              <div class="thumb-dark text-white">Práctica 2</div>
+              <div class="card-body">
+                <h3 class="h5 fw-bold">Implementar Style</h3>
+                <p class="mb-0">css</p>
+              </div>
+            </div>
+          </div>
+
+          <div class="col">
+            <div class="card shadow-sm h-100">
+              <div class="thumb-dark text-white">Práctica 3</div>
+              <div class="card-body">
+                <h3 class="h5 fw-bold">Modificar plantilla</h3>
+                <p class="mb-0">Bootstrap</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <footer class="py-4 bg-light border-top">
+      <div class="container text-center small text-muted">
+        © 2025 — DIW · Alumno: Rizwan Baig
+      </div>
+    </footer>
+  </body>
+</html>

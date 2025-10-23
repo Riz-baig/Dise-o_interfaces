@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Ejemplo con Layers (capas CSS)</title>
+  <style>
+    body { font-family: sans-serif; }
+    .fondo {
+      position: relative;
+      width: 300px;
+      height: 200px;
+      background: lightblue;
+      border: 2px solid #000;
+      margin: 20px;
+      padding: 10px;
+    }
+    .capa-superior {
+      position: absolute;
+      top: 40px;
+      left: 60px;
+      width: 150px;
+      height: 100px;
+      background: rgba(255, 0, 0, 0.6);
+      z-index: 10;
+      color: white;
+      font-weight: bold;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+  </style>
+</head>
+<body>
+  <h2>Ejemplo de Layers (capas CSS)</h2>
+  <div class="fondo">
+    Fondo azul
+    <div class="capa-superior">Encima</div>
+  </div>
+</body>
+</html>

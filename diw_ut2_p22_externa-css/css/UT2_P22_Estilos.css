@@ -1,0 +1,59 @@
+body {
+  font-family: Georgia, "Times New Roman", Times, serif; /*al cambiar la fuente, cambia en todo el documento*/
+  background-color: #f4f6f9;
+  color: #333;
+  margin: 0%;
+  padding: 0%;
+}
+header {
+  background-color: #0d47a1;
+  color: white;
+  text-align: center;
+  padding: 1.5rem;
+}
+h1 {
+  margin: 0%;
+}
+.subtitulo {
+  font-style: italic;
+  color: #bbdefb;
+}
+main {
+  padding: 1rem 2rem;
+}
+h2 {
+  color: #1565c0;
+  border-bottom: 2px solid #1565c0;
+}
+ul {
+  list-style-type: circle; /*los simbolos en vez de cuadrados cambian a circulos*/
+}
+li {
+  margin: 0.5rem 0;
+}
+footer {
+  text-align: center;
+  background-color: #e3f2fd;
+  padding: 1rem;
+  font-size: 0.9rem;
+}
+button {
+  /*Boton añadido con su propio estilo*/
+  color: #fff;
+  background-color: #1565c0;
+  padding: 10px 20px;
+  margin: 20px;
+  border: none;
+  border-radius: 8px;
+}
+.tarjeta {
+  /*Estilo aplicado a clase tarjeta*/
+  border: #1565c0 solid;
+  padding: 8px;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
+}
+.tarjeta p {
+  /*estilo aplicado al parrafo dentro de la seccion tarjeta*/
+  text-align: center;
+}
