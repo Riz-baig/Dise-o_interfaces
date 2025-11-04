@@ -1,0 +1,221 @@
+/* ====== Variables y reset mínimo ====== */
+:root {
+  --bg: #0f172a; /* slate-900 */
+  --card: #111827; /* gray-900 */
+  --muted: #94a3b8; /* slate-400 */
+  --text: #e5e7eb; /* gray-200 */
+  --brand: #22d3ee; /* cyan-400 */
+  --accent: #34d399; /* emerald-400 */
+  --warn: #f59e0b; /* amber-500 */
+  --border: #334155; /* slate-700 */
+  --focus: #60a5fa; /* blue-400 */
+}
+
+* {
+  box-sizing: border-box; /*box-sizing en todo el documento */
+}
+
+/* resto de tu base */
+html,
+body {
+  margin: 0;
+  padding: 0;
+  background: var(--bg);
+  color: var(--text);
+  font-family: system-ui, Segoe UI, Roboto, Arial, sans-serif;
+}
+img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
+
+/* ====== Layout global ====== */
+.site-header,
+.site-footer {
+  padding: 1.2rem clamp(1rem, 3vw, 2rem);
+}
+.site-header {
+  text-align: center;
+}
+.subtitle {
+  color: var(--muted);
+  margin-top: -0.5rem;
+}
+.container {
+  width: min(1100px, 90%);
+  margin-inline: auto;
+}
+
+/* ====== Cards grid ====== */
+.cards {
+  /* grid responsivo */
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  column-gap: 16px; /* separación horizontal entre columnas */
+  row-gap: 0; /* sin gap vertical, se controla con margin en .card */
+  margin-block: 24px; /* margen arriba y abajo del contenedor */
+}
+
+.card {
+  background: var(--card);
+  padding: 16px; /* padding 16px */
+  border: 2px solid var(--border); /*borde 2px sólido */
+  margin: 24px; /* margen 24px */
+  border-radius: 12px;
+}
+.card h3 {
+  margin: 0.5rem 0;
+}
+
+/* ====== Bordes ====== */
+.borders-demo {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 16px;
+  margin-block: 24px;
+}
+.box {
+  background: var(--card);
+  padding: 16px; /* padding para envolver contenido */
+  border-radius: 10px;
+  text-align: center;
+}
+
+/* Ejemplos específicos */
+.box.basic {
+  border: 4px solid var(--border); /* borde básico width/style/color */
+}
+.box.sides {
+  border-top: 4px solid var(--brand); /* top sólido */
+  border-right: 4px dashed var(--accent); /*  right dashed */
+  border-bottom: 4px dotted var(--warn); /* bottom dotted */
+  border-left: 4px double var(--border); /*left double */
+}
+.box.radius {
+  border: 3px solid var(--border);
+  border-radius: 24px 8px 24px 8px; /*esquinas 24px 8px 24px 8px */
+}
+.box.image {
+  border: 8px solid transparent;
+  border-image: linear-gradient(45deg, var(--brand), var(--accent), var(--warn))
+    1; /*border-image gradiente */
+}
+
+/* ====== Márgenes ====== */
+.margins-demo {
+  margin-block: 24px;
+}
+.m1 {
+  margin: 12px 24px;
+} /* shorthand 2 valores: vertical horizontal */
+.m2 {
+  margin: 8px 12px 16px 20px;
+} /* shorthand 4 valores: top right bottom left */
+
+/* Colapso de márgenes */
+.collapse-wrapper {
+  display: flow-root; /*evitar colapso (flow-root) */
+  background: rgba(255, 255, 255, 0.03);
+  padding: 8px 12px;
+  border: 1px dashed var(--border);
+  border-radius: 8px;
+  margin-block: 16px;
+}
+.colapso {
+  background: rgba(255, 255, 255, 0.02);
+}
+.colapso.top {
+  margin-bottom: 20px;
+}
+.colapso.bottom {
+  margin-top: 20px;
+}
+
+/* Márgenes lógicos */
+.logical {
+  writing-mode: horizontal-tb;
+}
+.logical-item {
+  margin-block: 24px; /* 24px arriba/abajo (lógico) */
+  margin-inline: 12px; /* 12px lados (lógico) */
+  background: rgba(255, 255, 255, 0.03);
+  border: 1px solid var(--border);
+  border-radius: 10px;
+}
+
+/* ====== Padding ====== */
+.padding-demo {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 16px;
+  margin-block: 24px;
+}
+.pad {
+  background: var(--card);
+  border: 1px solid var(--border);
+  border-radius: 10px;
+}
+.pad.a {
+  padding-top: 8px; /* padding individual top */
+  padding-right: 16px; /*  right */
+  padding-bottom: 24px; /* bottom */
+  padding-left: 32px; /* left */
+}
+.pad.b {
+  padding: 8px 16px 24px; /* shorthand 3 valores: top horizontal bottom */
+}
+.pad.c {
+  padding: 24px; /*el fondo se extiende por el padding */
+}
+
+/* ====== Botones estables ====== */
+.btn {
+  /* tamaños sólo con padding + borde transparente para estabilidad */
+  background: var(--brand);
+  color: #0b1324;
+  font-weight: 600;
+  border: 2px solid transparent; /* borde inicial transparente para no mover layout */
+  border-radius: 999px;
+  cursor: pointer;
+}
+.btn:hover {
+  border-color: var(--brand);
+  background: transparent;
+  color: var(--text);
+} /* cambio de color sin cambiar tamaño */
+.btn.sm {
+  padding: 0.35rem 0.7rem; /* tamaño pequeño solo con padding */
+}
+.btn.md {
+  padding: 0.55rem 1rem; /* tamaño mediano solo con padding */
+}
+.btn.lg {
+  padding: 0.8rem 1.25rem; /*tamaño grande solo con padding */
+}
+
+/* ====== Accesibilidad foco ====== */
+.btn:focus-visible,
+a:focus-visible,
+.card:focus-within {
+  outline: 3px solid var(--focus);
+  outline-offset: 3px;
+}
+
+/* ====== Responsivo ====== */
+/* padding responsive en .pad: móvil 8px, tablet 16px, escritorio 24px */
+@media (max-width: 640px) {
+  .pad {
+    padding: 8px !important; /* móvil */
+  }
+}
+@media (min-width: 641px) and (max-width: 1024px) {
+  .pad {
+    padding: 16px !important; /* tablet */
+  }
+}
+@media (min-width: 1025px) {
+  .pad {
+    padding: 24px !important; /* escritorio */
+  }
+}
